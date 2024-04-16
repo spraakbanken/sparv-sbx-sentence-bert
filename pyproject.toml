@@ -1,0 +1,14 @@
+[project]
+name = "sparv-sentence-bert"
+version = "0.1.0"
+description = "Sparv plugin for generating vector using the BERT sentence transformers model"
+readme = "README.md"
+license.text = "MIT License"
+authors = [
+    { name = "Samir", email = "yousuf.ali.mohammed@gu.se" }
+]
+dependencies = [
+    "sparv-pipeline~=5.0",
+    "sentence-transformers"
+]
+entry-points."sparv.plugin" = { sentence_bert = "sentence_bert" }

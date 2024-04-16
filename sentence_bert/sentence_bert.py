@@ -11,8 +11,8 @@ logger = get_logger(__name__)
 @annotator("Document vector using BERT sentence transformers")
 def vectorize_full_text(
         corpus_text: Text = Text(),
-        texts: Annotation = Annotation("<text>"),
-        out: Output = Output("<text>:sentence_bert.vector"),
+        texts: Annotation = Annotation("{chunk}"),
+        out: Output = Output("{chunk}:sentence_bert.vector"),
         model: str = Config("sentence_bert.model")
 ):
     corpus_text = corpus_text.read()
